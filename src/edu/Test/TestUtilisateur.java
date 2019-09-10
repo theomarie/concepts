@@ -6,7 +6,7 @@ public class TestUtilisateur {
 
 	public static void main(String[] args) {
 		Utilisateur user= new Utilisateur("zorro");
-		
+		System.out.println(user);
 	}
 	
 	
