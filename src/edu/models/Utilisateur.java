@@ -22,8 +22,8 @@ public class Utilisateur {
 	private String prenom;
 	private String nom;
 	private int age;
+	private Preferences prefs;
 	private List<Groupe> groupes;
-	private List<Preference> preferences;
 	public String getPrenom() {
 		return prenom;
 	}
@@ -38,6 +38,10 @@ public class Utilisateur {
 
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+	@Override
+	public String toString() {
+		return nom + connexions + prefs;
 	}
 
 	public List<Groupe> getGroupes() {
@@ -59,13 +63,7 @@ public class Utilisateur {
 
 
 
-	public List<Preference> getPreferences() {
-		return preferences;
-	}
-
-	public void setPreferences(List<Preference> preferences) {
-		this.preferences = preferences;
-	}
+	
 
 	
 
@@ -91,7 +89,7 @@ public class Utilisateur {
 		this.age = 0;
 		this.connexions = new ArrayList<Connexion>();
 		this.groupes = new ArrayList<Groupe>();
-		this.preferences = new ArrayList<Preference>();
+		prefs=Preferences.getDefault();
 	}
 	
 	
